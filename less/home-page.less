@@ -1,10 +1,16 @@
 header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .img {
     display: flex;
     justify-content: center;
+    width: 800px;
+    
 
     img {
-      width: 80%;
       margin-top: 0;
     }
   }
@@ -14,11 +20,7 @@ header {
     flex-direction: column;
     align-items: center;
     margin-top: 2%;
-
-
-    h2 {
-      width: 80%;
-    }
+    width: 800px;
 
     .pulse {
       animation: pulse 0.5s 1 both;
@@ -30,7 +32,6 @@ header {
   }
 
   p {
-    width: 80%;
     border-bottom: 2px dashed @navigation-border;
   }
 }
@@ -38,8 +39,6 @@ header {
 
 
 .home {
-
-  width: 80%;
 
   @media @mobile {
     width: 80%;
@@ -168,3 +167,70 @@ header {
   }
 
 // home
+
+
+// form
+
+#sectiontitle {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  .transparent();
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Add a background color and some padding around the form */
+.container3 {
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: 30px;
+}
+
+.main-form {
+  width: 80%;
+}
+
+.mainform {
+  width: 800px;
+}
+
+.contact {
+  
+  display: flex;
+  justify-content: center;
+}
+
