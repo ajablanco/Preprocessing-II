@@ -1,3 +1,9 @@
+body{
+  @media @tablet {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
 header {
 
   display: flex;
@@ -8,6 +14,10 @@ header {
     display: flex;
     justify-content: center;
     width: 800px;
+
+    @media @tablet {
+      width: 90vw;
+    }
     
 
     img {
@@ -21,6 +31,10 @@ header {
     align-items: center;
     margin-top: 2%;
     width: 800px;
+
+    @media @tablet {
+      width: 90vw;
+    }
 
     .pulse {
       animation: pulse 0.5s 1 both;
@@ -118,6 +132,7 @@ header {
 
     @media @mobile {
       flex-direction: column;
+      align-items: center;
     }
 
     .destination {
@@ -125,14 +140,22 @@ header {
       margin-bottom: 30px;
 
       @media @mobile {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
       }
     }
   }
 }
+
+
   .btn {
 
     .custom-button (rgb(17, 128, 127), 8px, white);
+
+    @media @mobile {
+      width: 100%;
+    }
 
   }
 
@@ -141,6 +164,8 @@ header {
     padding: 4%;
     background-color: rgb(37, 162, 183);
   }
+
+
 
   .keyframes(@name; @arguments) {
     @-moz-keyframes @name { @arguments(); }
@@ -172,9 +197,12 @@ header {
 // form
 
 #sectiontitle {
-  display: flex;
-  justify-content: center;
-  width: 50%;
+  
+  
+  div {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 input[type="text"],
@@ -229,7 +257,6 @@ input[type="submit"]:hover {
 }
 
 .contact {
-  
   display: flex;
   justify-content: center;
 }
