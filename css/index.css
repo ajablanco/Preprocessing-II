@@ -229,7 +229,14 @@ header .welcomep {
 header .welcomep h2 {
   width: 80%;
 }
-header .welcomep p {
+header .welcomep .pulse {
+  animation: pulse 0.5s 1 both;
+  -ms-animation: pulse 0.5s 1 both;
+  -moz-animation: pulse 0.5s 1 both;
+  -webkit-animation: pulse 0.5s 1 both;
+  -o-animation: pulse 0.5s 1 both;
+}
+header p {
   width: 80%;
   border-bottom: 2px dashed #C0C0C0;
 }
@@ -320,7 +327,7 @@ header .welcomep p {
     width: 100%;
   }
 }
-.home .btn {
+.btn {
   background-color: #11807f;
   border-radius: 8px;
   color: white;
@@ -330,9 +337,37 @@ header .welcomep p {
   text-align: center;
 }
 @media (max-width: 500px) {
-  .home .btn {
-    width: 100%;
-    padding: 4%;
-    background-color: #25a2b7;
+  width: 100%;
+  padding: 4%;
+  background-color: #25a2b7;
+}
+/* example */
+.btn {
+  -webkit-animation: fade-in 0.3s linear infinite alternate;
+  -moz-animation: fade-in 0.3s linear infinite alternate;
+  animation: fade-in 0.3s linear infinite alternate;
+}
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

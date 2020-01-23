@@ -34,7 +34,7 @@ header {
     border-bottom: 2px dashed @navigation-border;
   }
 }
-}
+
 
 
 .home {
@@ -130,7 +130,7 @@ header {
       }
     }
   }
-
+}
   .btn {
 
     .custom-button (rgb(17, 128, 127), 8px, white);
@@ -142,8 +142,29 @@ header {
     padding: 4%;
     background-color: rgb(37, 162, 183);
   }
-}
 
-}
+  .keyframes(@name; @arguments) {
+    @-moz-keyframes @name { @arguments(); }
+    @-webkit-keyframes @name { @arguments(); }
+    @keyframes @name { @arguments(); }
+  }
+  
+  .animation(@arguments) {
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+    animation: @arguments;
+  }
+  
+  /* example */
+  .btn {
+    
+    .keyframes(fade-in;{
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+      });
+  
+    .animation(fade-in 0.3s linear infinite alternate)
+  
+  }
 
 // home
